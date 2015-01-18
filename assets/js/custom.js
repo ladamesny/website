@@ -70,26 +70,26 @@ $(document).ready(function () {
 	}
 
 	// Email submission
-	$('#formContact').submit(function(event) {
-        event.preventDefault();
-        var formData = {
-            'name': $('input[name=name]').val(),
-            'email': $('input[name=email]').val(),
-            'subject': $('input[name=subject]').val(),
-            'message': $('textarea[name=message]').val()
-        };
-        $.ajax({
-            type: 'POST',
-            url: 'contact.php',
-            data: formData,
-            dataType: 'html',
-            encode: true,
-            success: function(data) {
-                document.getElementById("submit").innerHTML = data;
-            }
-        });
-        document.getElementById("submit").disabled = "true";
-    });
+	// $('#formContact').submit(function(event) {
+ //        event.preventDefault();
+ //        var formData = {
+ //            'name': $('input[name=name]').val(),
+ //            'email': $('input[name=email]').val(),
+ //            'subject': $('input[name=subject]').val(),
+ //            'message': $('textarea[name=message]').val()
+ //        };
+ //        $.ajax({
+ //            type: 'POST',
+ //            url: 'contact.php',
+ //            data: formData,
+ //            dataType: 'html',
+ //            encode: true,
+ //            success: function(data) {
+ //                document.getElementById("submit").innerHTML = data;
+ //            }
+ //        });
+ //        document.getElementById("submit").disabled = "true";
+ //    });
 
 	// Scroll Top
     $('#scrollTop').click(function () {
